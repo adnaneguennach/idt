@@ -10,9 +10,24 @@
   --text:    #0B192C;
   --text2:   #4A5568;
   --text3:   #718096;
-  --blue:    #6366F1;
-  --bluel:   #818CF8;
-  --bluedim: rgba(99,102,241,0.1);
+  --blue:    #2563EB;
+  --bluel:   #3B82F6;
+  --bluedim: rgba(37,99,235,0.1);
+}
+
+.dark {
+  --bg:      #0B1120;
+  --bg2:     #111827;
+  --bg3:     #1F2937;
+  --bg4:     #374151;
+  --border:  rgba(255,255,255,0.08);
+  --border2: rgba(255,255,255,0.16);
+  --text:    #F9FAFB;
+  --text2:   #D1D5DB;
+  --text3:   #9CA3AF;
+  --blue:    #3B82F6;
+  --bluel:   #60A5FA;
+  --bluedim: rgba(59,130,246,0.15);
 }
 
 @theme inline {
@@ -27,7 +42,7 @@
   --color-text3: var(--text3);
   --color-blue-main: var(--blue);
   --color-bluedim: var(--bluedim);
-  --font-sans: var(--font-inter), "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: var(--font-gt-america);
   
   --animate-hglow: hglow 11s ease-in-out infinite alternate;
   --animate-rwords: rwords 10s cubic-bezier(.72,.04,.28,.96) infinite;
@@ -77,7 +92,7 @@ body {
 }
 
 /* Base custom classes ported from design */
-.container-custom { max-width: 1240px; margin: 0 auto; padding: 0 48px; }
+.container-custom { max-width: 1240px; margin: 0 auto; padding-inline: 48px; }
 
 /* Ghost/Primary Button base styles */
 .btn {
@@ -98,13 +113,23 @@ body {
 .btn-primary:hover { background: #1D4ED8; transform: translateY(-1px); box-shadow: 0 4px 18px rgba(37,99,235,.28); }
 .btn-lg { font-size: 16px; padding: 13px 30px; border-radius: 10px; }
 
-/* Custom Anim Classes */
-.anim { opacity: 0; transform: translateY(22px); transition: opacity .62s ease, transform .62s ease; }
-.anim.in { opacity: 1; transform: translateY(0); }
-.d1 { transition-delay: .08s; }
-.d2 { transition-delay: .18s; }
-.d3 { transition-delay: .28s; }
-.d4 { transition-delay: .38s; }
+/* Custom Apple-Style Anim Classes */
+.anim { 
+  opacity: 0; 
+  transform: translateY(40px) scale(0.96); 
+  filter: blur(10px);
+  transition: opacity 1.4s cubic-bezier(0.22, 1, 0.36, 1), transform 1.4s cubic-bezier(0.22, 1, 0.36, 1), filter 1.4s cubic-bezier(0.22, 1, 0.36, 1); 
+  will-change: transform, opacity, filter;
+}
+.anim.in { 
+  opacity: 1; 
+  transform: translateY(0) scale(1); 
+  filter: blur(0px);
+}
+.d1 { transition-delay: .1s; }
+.d2 { transition-delay: .2s; }
+.d3 { transition-delay: .3s; }
+.d4 { transition-delay: .4s; }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {

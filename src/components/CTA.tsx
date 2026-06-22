@@ -14,7 +14,7 @@ export default function CTA() {
             <h2 className="text-[30px] md:text-[34px] font-light text-white leading-[1.25] tracking-[0.01em] mb-[24px] whitespace-nowrap">
               Turn your tax debt<br />into freedom.
             </h2>
-            <Link href="#" className="bg-white text-[#1c1a17] text-[13px] font-[500] px-[16px] py-[8px] rounded-[6px] transition-colors hover:bg-gray-100 no-underline">
+            <Link href="/survey" className="bg-white text-[#1c1a17] text-[13px] font-[500] px-[16px] py-[8px] rounded-[6px] transition-colors hover:bg-gray-100 no-underline">
               Get started free
             </Link>
           </div>

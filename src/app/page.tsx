@@ -1,10 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import TrustTicker from "@/components/TrustTicker";
-import SplitFeature from "@/components/SplitFeature";
-import ResultsCarousel from "@/components/ResultsCarousel";
 import Process from "@/components/Process";
-import Stats from "@/components/Stats";
+import SplitFeature from "@/components/SplitFeature";
+import OurCompany from "@/components/OurCompany";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
@@ -18,11 +16,9 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <TrustTicker />
-        <SplitFeature />
-        <ResultsCarousel />
         <Process />
-        <Stats />
+        <SplitFeature />
+        <OurCompany />
         <Team />
         <Testimonials />
         <CTA />

@@ -32,9 +32,15 @@ export default function Footer() {
             <div>
               <div className="text-[13px] font-semibold text-text-main mb-4">Company</div>
               <ul className="flex flex-col gap-[9px]">
-                {["About Us", "Careers", "Contact", "Reviews", "Blog"].map(item => (
-                  <li key={item}>
-                    <Link href="#" className="text-[14px] text-text2 transition-colors duration-150 hover:text-text-main">{item}</Link>
+                {[
+                  { name: "About Us", href: "/about" },
+                  { name: "Careers", href: "/careers" },
+                  { name: "Contact", href: "/contact-us" },
+                  { name: "Reviews", href: "/reviews" },
+                  { name: "Blog", href: "/blog" }
+                ].map(item => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-[14px] text-text2 transition-colors duration-150 hover:text-text-main">{item.name}</Link>
                   </li>
                 ))}
               </ul>

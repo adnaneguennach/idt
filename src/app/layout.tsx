@@ -1,8 +1,32 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const gtAmerica = localFont({
+  src: [
+    {
+      path: "../fonts/GT-America-Standard-Light-Trial.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../fonts/GT-America-Standard-Regular-Trial.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/GT-America-Standard-Medium-Trial.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/GT-America-Standard-Bold-Trial.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-gt-america",
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -11,6 +35,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://idealtax.com"),
   title: "Ideal Tax | Tax Debt Resolution Services",
   description: "Resolve your tax problems, eliminate debt stress, and move toward financial freedom — backed by 15 years of proven results. Get a free consultation today.",
   keywords: ["tax debt", "tax relief", "IRS back taxes", "wage garnishments", "tax liens", "offer in compromise", "penalty abatement"],
@@ -61,15 +86,22 @@ export const metadata: Metadata = {
   },
 };
 
+import { ThemeProvider } from "@/components/ThemeProvider";
+import SmoothScrolling from "@/components/SmoothScrolling";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full scroll-smooth antialiased ${inter.variable}`} suppressHydrationWarning>
-      <body className={`min-h-full flex flex-col font-sans bg-bg text-text-main overflow-x-hidden`} suppressHydrationWarning>
-        {children}
+    <html lang="en" className={`h-full scroll-smooth antialiased ${gtAmerica.variable}`} data-scroll-behavior="smooth" suppressHydrationWarning>
+      <body className={`min-h-full flex flex-col font-sans font-light bg-bg text-text-main overflow-x-hidden`} suppressHydrationWarning>
+        <SmoothScrolling>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+            {children}
+          </ThemeProvider>
+        </SmoothScrolling>
       </body>
     </html>
   );

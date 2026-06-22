@@ -22,35 +22,35 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center text-center pt-[130px] px-6 md:px-12 pb-[100px] relative overflow-hidden">
+    <section className="min-h-screen flex flex-col items-center justify-center text-center pt-[130px] px-6 md:px-12 pb-[40px] relative overflow-hidden bg-bg2">
       <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[700px] h-[500px] pointer-events-none bg-[radial-gradient(ellipse,rgba(37,99,235,0.07)_0%,transparent_65%)] animate-hglow" />
       
       <div className="relative z-10 max-w-[880px]">
-        <h1 className="text-[clamp(54px,7.2vw,94px)] font-semibold tracking-[-0.036em] leading-none text-text-main">
+        <h1 className="text-[clamp(36px,8vw,82px)] font-light tracking-[-0.036em] leading-none text-text-main whitespace-nowrap">
           Tax relief for
         </h1>
-        <div className="overflow-hidden h-[clamp(68px,9vw,110px)] flex items-start justify-center mt-1">
+        <div className="overflow-hidden h-[clamp(48px,10vw,96px)] flex items-start justify-center mt-1">
           <div className="flex flex-col animate-rwords">
-            <div className="text-[clamp(54px,7.2vw,94px)] font-semibold tracking-[-0.036em] leading-none text-blue-main h-[clamp(68px,9vw,110px)] flex items-center justify-center shrink-0">
+            <div className="text-[clamp(36px,8vw,82px)] font-light tracking-[-0.036em] leading-none text-blue-main h-[clamp(48px,10vw,96px)] flex items-center justify-center shrink-0 whitespace-nowrap px-4">
               everyday Americans
             </div>
-            <div className="text-[clamp(54px,7.2vw,94px)] font-semibold tracking-[-0.036em] leading-none text-blue-main h-[clamp(68px,9vw,110px)] flex items-center justify-center shrink-0">
+            <div className="text-[clamp(36px,8vw,82px)] font-light tracking-[-0.036em] leading-none text-blue-main h-[clamp(48px,10vw,96px)] flex items-center justify-center shrink-0 whitespace-nowrap px-4">
               working families
             </div>
-            <div className="text-[clamp(54px,7.2vw,94px)] font-semibold tracking-[-0.036em] leading-none text-blue-main h-[clamp(68px,9vw,110px)] flex items-center justify-center shrink-0">
+            <div className="text-[clamp(36px,8vw,82px)] font-light tracking-[-0.036em] leading-none text-blue-main h-[clamp(48px,10vw,96px)] flex items-center justify-center shrink-0 whitespace-nowrap px-4">
               small businesses
             </div>
-            <div className="text-[clamp(54px,7.2vw,94px)] font-semibold tracking-[-0.036em] leading-none text-blue-main h-[clamp(68px,9vw,110px)] flex items-center justify-center shrink-0">
+            <div className="text-[clamp(36px,8vw,82px)] font-light tracking-[-0.036em] leading-none text-blue-main h-[clamp(48px,10vw,96px)] flex items-center justify-center shrink-0 whitespace-nowrap px-4">
               self-employed pros
             </div>
           </div>
         </div>
 
-        <div className="mt-11 mx-auto max-w-[580px] bg-white border border-border2 rounded-xl p-3 sm:p-[7px_7px_7px_22px] flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 shadow-[0_2px_12px_rgba(28,24,20,0.06)]">
+        <div className="mt-11 mx-auto max-w-[580px] bg-bg border border-border2 rounded-xl p-3 sm:p-[7px_7px_7px_22px] flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 shadow-[0_2px_12px_rgba(28,24,20,0.06)]">
           <span className="text-[14px] text-text2 flex-1 text-center sm:text-left py-2 sm:py-0">
             Resolve your <span className="text-text-main font-medium">{promptText}</span> <span className="hidden sm:inline">→</span>
           </span>
-          <Link href="#" className="btn btn-primary text-[14px] px-5 py-2.5 rounded-lg shrink-0 w-full sm:w-auto text-center justify-center">
+          <Link href="/survey" className="btn btn-primary text-[14px] px-5 py-2.5 rounded-lg shrink-0 w-full sm:w-auto text-center justify-center">
             Free Consultation
           </Link>
         </div>
@@ -71,12 +71,12 @@ export default function Hero() {
           ))}
         </div>
 
-        <p className="text-[18px] text-text2 leading-[1.68] max-w-[510px] mx-auto mt-7">
+        <p className="text-[16px] md:text-[18px] text-text2 leading-[1.65] max-w-[560px] mx-auto anim d1 mt-7">
           Resolve your tax problems, eliminate debt stress, and move toward financial freedom — backed by 15 years of proven results.
         </p>
 
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 mt-9">
-          <Link href="#" className="btn btn-primary btn-lg w-full sm:w-auto justify-center">
+          <Link href="/survey" className="btn btn-primary btn-lg w-full sm:w-auto justify-center">
             Get Started Free
           </Link>
           <a href="tel:+18775182860" className="btn btn-ghost btn-lg w-full sm:w-auto justify-center">

@@ -28,16 +28,16 @@ export default function Process() {
   ];
 
   return (
-    <section className="py-[60px] md:py-[120px]">
+    <section className="py-[60px] md:py-[80px] bg-bg">
       <div className="container-custom">
-        <div className="text-center max-w-[640px] mx-auto mb-[72px]">
+        <div className="max-w-[640px] mb-[72px]">
           <div className="text-[12px] font-semibold tracking-[0.09em] uppercase text-blue-main mb-[18px] opacity-85 anim">
             Our Process
           </div>
-          <h2 className="text-[clamp(38px,4.2vw,62px)] font-semibold tracking-[-0.026em] leading-[1.06] anim d1">
+          <h2 className="text-[clamp(32px,4vw,48px)] font-light tracking-[-0.026em] leading-[1.06] anim d1">
             From concern to freedom<br />in three steps
           </h2>
-          <p className="text-[17px] text-text2 leading-[1.7] mt-4 anim d2">
+          <p className="text-[16px] text-text2 leading-[1.7] mt-4 anim d2">
             Refined over 15 years of proven industry experience, the Ideal Process gets you from uncertainty to resolution — with experts at every step.
           </p>
         </div>
@@ -87,7 +87,7 @@ export default function Process() {
                   activeTab === i ? "opacity-100 z-10" : "opacity-0 z-0"
                 }`}
               >
-                <Image src={tab.image} alt={tab.title} fill className="object-cover" />
+                <Image src={tab.image} alt={tab.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 <div className="absolute bottom-6 left-0 right-0 flex flex-col items-center justify-center gap-3">
                   <div className="w-[56px] h-[56px] rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white/90">

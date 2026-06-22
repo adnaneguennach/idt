@@ -12,7 +12,7 @@ export default function Team() {
     <section className="py-[60px] pb-[80px] md:py-[100px] md:pb-[120px]">
       <div className="container-custom">
         <div className="text-center max-w-[740px] mx-auto mb-[40px] md:mb-[72px] anim">
-          <h2 className="text-[clamp(38px,4.2vw,62px)] font-semibold tracking-[-0.026em] leading-[1.06] mb-[18px]">
+          <h2 className="text-[clamp(32px,4vw,48px)] font-light tracking-[-0.026em] leading-[1.06] mb-[18px]">
             You own the outcome.<br />We own the expertise.
           </h2>
           <p className="text-[17px] text-text2 leading-[1.7] max-w-[580px] mx-auto mt-[18px]">
